@@ -9,11 +9,11 @@
 import UIKit
 import Quickblox
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
          ActivityIndicatorUtil.sharedInstnace.addActivityIndicator(viewController: self)
@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
 
     // MARK: Login Service
     func loginWithUSerDetails() {
-        var currentUser:QBUUser = ServiceManager.instance().currentUser
+        var currentUser: QBUUser = ServiceManager.instance().currentUser 
         if (currentUser == nil) {
             currentUser = QBUUser()
         }
@@ -39,7 +39,6 @@ class LoginViewController: UIViewController {
             }
             ActivityIndicatorUtil.sharedInstnace.hideActivityIndicator(viewController: self!)
             self?.navigateToChatListViewController()
-            
         })
     }
 
@@ -59,4 +58,10 @@ class LoginViewController: UIViewController {
         let chatListViewController = self.storyboard?.instantiateViewController(withIdentifier: "UsersChatListViewController") as! UsersChatListViewController
         self.navigationController?.pushViewController(chatListViewController, animated: true)
     }
+
+    // Mark : UITextField Delegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    
 }

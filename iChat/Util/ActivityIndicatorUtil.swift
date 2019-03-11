@@ -19,7 +19,7 @@ class ActivityIndicatorUtil: NSObject {
 
     // Add ActivityIndicator to ViewController
     func addActivityIndicator(viewController: UIViewController) {
-        activityIndicator = UIActivityIndicatorView(frame: CGRect(x: (viewController.view.frame.size.width/2) - (ConstantsUtil.ActivityIndicatorKeys.DefaultWidth/2), y: (viewController.view.frame.size.height/2) - (ConstantsUtil.ActivityIndicatorKeys.DefaultHeight/2), width: ConstantsUtil.ActivityIndicatorKeys.DefaultWidth, height: ConstantsUtil.ActivityIndicatorKeys.DefaultHeight))
+        activityIndicator = UIActivityIndicatorView(frame: CGRect(x: (viewController.view.frame.size.width/2) - (Constants.ActivityIndicatorKeys.DefaultWidth/2), y: (viewController.view.frame.size.height/2) - (Constants.ActivityIndicatorKeys.DefaultHeight/2), width: Constants.ActivityIndicatorKeys.DefaultWidth, height: Constants.ActivityIndicatorKeys.DefaultHeight))
         activityIndicator.style = .whiteLarge
         activityIndicator.color = ColorUtil.ActivityIndicator.IndicatorColor
         activityIndicator.hidesWhenStopped = true

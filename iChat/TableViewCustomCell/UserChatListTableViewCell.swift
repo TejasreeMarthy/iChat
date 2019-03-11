@@ -28,7 +28,7 @@ class UserChatListTableViewCell: UITableViewCell {
     func loadCellData(user: QBUUser) {
         self.userName.text = user.fullName
         self.userOnlineStatus.text = self.showOnlineOrOfflineStatus(user: user)
-        if self.showOnlineOrOfflineStatus(user: user) == ConstantsUtil.UserChatStatus.Offline {
+        if self.showOnlineOrOfflineStatus(user: user) == Constants.UserChatStatus.Offline {
             self.userOnlineStatus.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         }
     }
@@ -38,9 +38,9 @@ class UserChatListTableViewCell: UITableViewCell {
         let userLastRequestAtTimeInterval = Int(user.lastRequestAt?.timeIntervalSince1970 ?? 0)
         // if user didn't do anything last 1 minute (60 seconds)
         if (currentTimeInterval - userLastRequestAtTimeInterval) > 60 {
-            return ConstantsUtil.UserChatStatus.Offline
+            return Constants.UserChatStatus.Offline
         }
-        return ConstantsUtil.UserChatStatus.Online
+        return Constants.UserChatStatus.Online
     }
     
 }

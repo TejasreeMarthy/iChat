@@ -19,7 +19,7 @@
 		2326A2512230F7E900C60C08 /* UsersChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A2502230F7E900C60C08 /* UsersChatListViewController.swift */; };
 		2326A2532230F83200C60C08 /* ChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A2522230F83200C60C08 /* ChatScreenViewController.swift */; };
 		2326A2552230F85F00C60C08 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A2542230F85F00C60C08 /* AlertUtil.swift */; };
-		2326A2572230F86D00C60C08 /* ConstantsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A2562230F86D00C60C08 /* ConstantsUtil.swift */; };
+		2326A2572230F86D00C60C08 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A2562230F86D00C60C08 /* Constants.swift */; };
 		2326A2592230F96800C60C08 /* ActivityIndicatorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A2582230F96800C60C08 /* ActivityIndicatorUtil.swift */; };
 		2326A2602231161E00C60C08 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A25F2231161E00C60C08 /* ServiceManager.swift */; };
 		2326A2622231166C00C60C08 /* NotificationServiceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A2612231166C00C60C08 /* NotificationServiceUtil.swift */; };
@@ -29,6 +29,11 @@
 		2326A277223141E300C60C08 /* UserChatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A275223141E300C60C08 /* UserChatListTableViewCell.swift */; };
 		2326A278223141E300C60C08 /* UserChatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2326A276223141E300C60C08 /* UserChatListTableViewCell.xib */; };
 		2326A27A22363A0100C60C08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2326A27922363A0100C60C08 /* Localizable.strings */; };
+		2326A27C22366A3500C60C08 /* ChatScreenViewController+ChatConnectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A27B22366A3500C60C08 /* ChatScreenViewController+ChatConnectionDelegate.swift */; };
+		2326A27E22366E4300C60C08 /* ChatScreenViewController+ChatServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A27D22366E4300C60C08 /* ChatScreenViewController+ChatServiceDelegate.swift */; };
+		2326A28022366F0A00C60C08 /* ChatScreenViewController+ChatCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A27F22366F0A00C60C08 /* ChatScreenViewController+ChatCellDelegate.swift */; };
+		2326A282223672BE00C60C08 /* BaseChatScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A281223672BE00C60C08 /* BaseChatScreenViewController.swift */; };
+		2326A2842236747B00C60C08 /* ChatScreenViewController+DeferedQueueManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2326A2832236747B00C60C08 /* ChatScreenViewController+DeferedQueueManager.swift */; };
 		656F30DF57100C519C880C0C /* Pods_iChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A52296E3C6830C92EC8CBD /* Pods_iChatUITests.framework */; };
 		866CF54BF9BE82D7C352DAD5 /* Pods_iChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDD052032C2B8441700F5A48 /* Pods_iChat.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +74,7 @@
 		2326A2502230F7E900C60C08 /* UsersChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersChatListViewController.swift; sourceTree = "<group>"; };
 		2326A2522230F83200C60C08 /* ChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreenViewController.swift; sourceTree = "<group>"; };
 		2326A2542230F85F00C60C08 /* AlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
-		2326A2562230F86D00C60C08 /* ConstantsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsUtil.swift; sourceTree = "<group>"; };
+		2326A2562230F86D00C60C08 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2326A2582230F96800C60C08 /* ActivityIndicatorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorUtil.swift; sourceTree = "<group>"; };
 		2326A25F2231161E00C60C08 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		2326A2612231166C00C60C08 /* NotificationServiceUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationServiceUtil.swift; sourceTree = "<group>"; };
@@ -81,6 +86,11 @@
 		2326A275223141E300C60C08 /* UserChatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatListTableViewCell.swift; sourceTree = "<group>"; };
 		2326A276223141E300C60C08 /* UserChatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserChatListTableViewCell.xib; sourceTree = "<group>"; };
 		2326A27922363A0100C60C08 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		2326A27B22366A3500C60C08 /* ChatScreenViewController+ChatConnectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatScreenViewController+ChatConnectionDelegate.swift"; sourceTree = "<group>"; };
+		2326A27D22366E4300C60C08 /* ChatScreenViewController+ChatServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatScreenViewController+ChatServiceDelegate.swift"; sourceTree = "<group>"; };
+		2326A27F22366F0A00C60C08 /* ChatScreenViewController+ChatCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatScreenViewController+ChatCellDelegate.swift"; sourceTree = "<group>"; };
+		2326A281223672BE00C60C08 /* BaseChatScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseChatScreenViewController.swift; sourceTree = "<group>"; };
+		2326A2832236747B00C60C08 /* ChatScreenViewController+DeferedQueueManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatScreenViewController+DeferedQueueManager.swift"; sourceTree = "<group>"; };
 		54FCFF0054BFAEFEFC93D0EA /* Pods-iChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChat.debug.xcconfig"; path = "Target Support Files/Pods-iChat/Pods-iChat.debug.xcconfig"; sourceTree = "<group>"; };
 		688860E9384D2849F1964D5B /* Pods-iChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChatTests.debug.xcconfig"; path = "Target Support Files/Pods-iChatTests/Pods-iChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FCF84A622B4591E98683E10 /* Pods-iChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iChatUITests.release.xcconfig"; path = "Target Support Files/Pods-iChatUITests/Pods-iChatUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				2326A2542230F85F00C60C08 /* AlertUtil.swift */,
-				2326A2562230F86D00C60C08 /* ConstantsUtil.swift */,
+				2326A2562230F86D00C60C08 /* Constants.swift */,
 				2326A2582230F96800C60C08 /* ActivityIndicatorUtil.swift */,
 				2326A2612231166C00C60C08 /* NotificationServiceUtil.swift */,
 				2326A270223122E500C60C08 /* ColorUtil.swift */,
@@ -212,7 +222,12 @@
 			isa = PBXGroup;
 			children = (
 				2326A2502230F7E900C60C08 /* UsersChatListViewController.swift */,
+				2326A281223672BE00C60C08 /* BaseChatScreenViewController.swift */,
 				2326A2522230F83200C60C08 /* ChatScreenViewController.swift */,
+				2326A27B22366A3500C60C08 /* ChatScreenViewController+ChatConnectionDelegate.swift */,
+				2326A27D22366E4300C60C08 /* ChatScreenViewController+ChatServiceDelegate.swift */,
+				2326A27F22366F0A00C60C08 /* ChatScreenViewController+ChatCellDelegate.swift */,
+				2326A2832236747B00C60C08 /* ChatScreenViewController+DeferedQueueManager.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -520,18 +535,23 @@
 			files = (
 				2326A2532230F83200C60C08 /* ChatScreenViewController.swift in Sources */,
 				2326A24F2230F7B200C60C08 /* LoginViewController.swift in Sources */,
-				2326A2572230F86D00C60C08 /* ConstantsUtil.swift in Sources */,
+				2326A2572230F86D00C60C08 /* Constants.swift in Sources */,
+				2326A27E22366E4300C60C08 /* ChatScreenViewController+ChatServiceDelegate.swift in Sources */,
 				2326A21F2230EFB500C60C08 /* iChat.xcdatamodeld in Sources */,
 				2326A271223122E500C60C08 /* ColorUtil.swift in Sources */,
 				2326A2172230EFB500C60C08 /* AppDelegate.swift in Sources */,
 				2326A277223141E300C60C08 /* UserChatListTableViewCell.swift in Sources */,
+				2326A28022366F0A00C60C08 /* ChatScreenViewController+ChatCellDelegate.swift in Sources */,
 				2326A267223119A900C60C08 /* MessageNotificationManager.m in Sources */,
 				2326A26F22311FBA00C60C08 /* String+Localized.swift in Sources */,
+				2326A2842236747B00C60C08 /* ChatScreenViewController+DeferedQueueManager.swift in Sources */,
 				2326A2602231161E00C60C08 /* ServiceManager.swift in Sources */,
 				2326A2622231166C00C60C08 /* NotificationServiceUtil.swift in Sources */,
 				2326A2552230F85F00C60C08 /* AlertUtil.swift in Sources */,
 				2326A2592230F96800C60C08 /* ActivityIndicatorUtil.swift in Sources */,
+				2326A27C22366A3500C60C08 /* ChatScreenViewController+ChatConnectionDelegate.swift in Sources */,
 				2326A2512230F7E900C60C08 /* UsersChatListViewController.swift in Sources */,
+				2326A282223672BE00C60C08 /* BaseChatScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,12 +8,11 @@
 
 import UIKit
 
-class AlertUtil: NSObject {
-    
+class AlertUtil {
+
     static let sharedInstnace = AlertUtil()
-    
-    private override init() {
-        
+
+    private  init() { 
     }
     // Displays alert with title and subtitle
     func showAlertMessage(title: String, subTitle: String, viewController: UIViewController) {

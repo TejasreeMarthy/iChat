@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         //Application keys
-        QBSettings.applicationID = ConstantsUtil.ApplicationKeys.kApplicationID;
-        QBSettings.accountKey = ConstantsUtil.ApplicationKeys.kAccountKey
-        QBSettings.authKey = ConstantsUtil.ApplicationKeys.kAuthKey
-        QBSettings.authSecret = ConstantsUtil.ApplicationKeys.kAuthSecret
+        QBSettings.applicationID = Constants.ApplicationKeys.kApplicationID;
+        QBSettings.accountKey = Constants.ApplicationKeys.kAccountKey
+        QBSettings.authKey = Constants.ApplicationKeys.kAuthKey
+        QBSettings.authSecret = Constants.ApplicationKeys.kAuthSecret
         
         // Enable carbons to maintain copy
         QBSettings.carbonsEnabled = true

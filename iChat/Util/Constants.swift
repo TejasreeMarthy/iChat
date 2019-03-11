@@ -1,5 +1,5 @@
 //
-//  ConstantsUtil.swift
+//  Constants.swift
 //  iChat
 //
 //  Created by Tejasree Marthy on 07/03/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConstantsUtil: NSObject {
+struct Constants {
 
     struct ActivityIndicatorKeys {
         static let DefaultHeight: CGFloat = 30.0

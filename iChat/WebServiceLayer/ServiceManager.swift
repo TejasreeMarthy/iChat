@@ -98,7 +98,7 @@ class ServiceManager: QMServicesManager {
      */
     func downloadCurrentEnvironmentUsers(successBlock:(([QBUUser]?) -> Void)?, errorBlock:((NSError) -> Void)?) {
         
-        let enviroment = ConstantsUtil.environment.QB_USERS_ENVIROMENT
+        let enviroment = Constants.environment.QB_USERS_ENVIROMENT
         
         self.usersService.searchUsers(withTags: [enviroment]).continueWith(block: { [weak self] (task) -> Any? in
             
@@ -120,12 +120,9 @@ class ServiceManager: QMServicesManager {
             return defaultColor
         }
         
-        let indexOfGivenUser = users.index(of: givenUser)
-        if indexOfGivenUser! < ColorUtil.sharedInstance.colors.count {
-            return ColorUtil.sharedInstance.colors[indexOfGivenUser!]
-        } else {
-            return defaultColor
-        }
+        let indexOfGivenUserColor = users.index(of: givenUser)! % ColorUtil.sharedInstance.randomColors.count
+        return ColorUtil.sharedInstance.randomColors[indexOfGivenUserColor]
+        
     }
 
     /**
@@ -134,9 +131,11 @@ class ServiceManager: QMServicesManager {
      */
     func sortedUsers() -> [QBUUser]? {
         let unsortedUsers = self.usersService.usersMemoryStorage.unsortedUsers()
+        
         let sortedUsers = unsortedUsers.sorted(by: { (user1, user2) -> Bool in
             return user1.login!.compare(user2.login!, options:NSString.CompareOptions.numeric) == ComparisonResult.orderedAscending
         })
+        
         return sortedUsers
     }
 

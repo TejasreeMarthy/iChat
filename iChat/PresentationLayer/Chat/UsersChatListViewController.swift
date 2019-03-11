@@ -16,7 +16,7 @@ class UsersChatListViewController: UIViewController, QMChatServiceDelegate, QMCh
     var users : [QBUUser] = []
 
     @IBOutlet weak var chatListTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initalizeData()
@@ -45,7 +45,7 @@ class UsersChatListViewController: UIViewController, QMChatServiceDelegate, QMCh
                                         target: self, action: #selector(logoutButtonClicked))
         return logoutButton
     }
-    
+
     @objc func logoutButtonClicked() {
         if !QBChat.instance.isConnected {
             AlertUtil.sharedInstnace.showAlertMessage(title: "",
@@ -109,7 +109,6 @@ class UsersChatListViewController: UIViewController, QMChatServiceDelegate, QMCh
             chatScreenViewController.dialog = chatDialog
             chatScreenViewController.user = user
             self.navigationController?.pushViewController(chatScreenViewController, animated: true)
-            
         })
     }
 
@@ -126,7 +125,7 @@ class UsersChatListViewController: UIViewController, QMChatServiceDelegate, QMCh
         alert.addAction(alertOKAction)
         self.present(alert, animated: true, completion: nil)
     }
-    
+
     //logout user
     func logoutCurrentUser() {
         ServiceManager.instance().logoutUserWithCompletion { [weak self] (boolValue) -> () in
@@ -151,22 +150,22 @@ class UsersChatListViewController: UIViewController, QMChatServiceDelegate, QMCh
 }
 // MARK: UITableView Methods
 extension UsersChatListViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count;
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserChatListTableViewCell") as! UserChatListTableViewCell
         let user = self.users[indexPath.row]
         cell.loadCellData(user: user)
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
     }
@@ -176,6 +175,6 @@ extension UsersChatListViewController: UITableViewDelegate, UITableViewDataSourc
         let user = self.users[indexPath.row]
         self.createChatDailogue(user: user)
     }
-    
+
 }
 
