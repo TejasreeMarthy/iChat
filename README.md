@@ -46,5 +46,6 @@ All the accounts have the same password innominds123
 ![Simulator Screen Shot - iPhone XR - 2019-03-11 at 18 04 02](https://user-images.githubusercontent.com/17449631/54176275-35449580-44b4-11e9-992b-12256e6fff9e.png)
 
 
-![Simulator Screen Shot - iPhone XR - 2019-03-11 at 18 05 09](https://user-images.githubusercontent.com/17449631/54176284-3f669400-44b4-11e9-9698-5fa2c115911b.png)
+![Simulator Screen Shot - iPhone XR - 2019-03-12 at 10 49 06](https://user-images.githubusercontent.com/17449631/54176355-848ac600-44b4-11e9-9c62-65f2232f2be0.png)
+
 
